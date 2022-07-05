@@ -1,7 +1,6 @@
 {
   "extends": ["config:base", "group:allNonMajor", ":maintainLockFilesWeekly"],
   "rangeStrategy": "bump",
-  "postUpdateOptions": ["yarnDedupeHighest"],
   "rebaseWhen": "conflicted",
   "ignorePaths": [
     "**/node_modules/**",
@@ -22,6 +21,32 @@
       "matchPackageNames": ["source-map"],
       "matchUpdateTypes": ["major", "minor"],
       "groupName": "source-map"
+    },
+    {
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "react-is",
+        "react-test-renderer",
+        "@testing-library/react",
+        "@testing-library/user-event",
+        "@types/react",
+        "@types/react-dom",
+        "@types/react-test-renderer",
+        "@chakra-ui/react"
+      ],
+      "matchUpdateTypes": ["major"],
+      "groupName": "react"
+    },
+    {
+      "matchPackageNames": [
+        "socketcluster-client",
+        "@types/socketcluster-client",
+        "socketcluster",
+        "@types/socketcluster-server"
+      ],
+      "matchUpdateTypes": ["major"],
+      "groupName": "socketcluster"
     }
   ]
 }
