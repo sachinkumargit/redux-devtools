@@ -5,8 +5,6 @@ postMerge :
   
   subModules:          #Not to be changed
       
-      
-        
       - name: react-base16-styling     
         path : "./packages/react-base16-styling"
         pattern: 
