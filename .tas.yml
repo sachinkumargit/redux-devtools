@@ -1,7 +1,7 @@
 postMerge :
   preRun: 
     command:
-      - pnpm install
+      - npm install
   
   subModules:          #Not to be changed
       
@@ -13,7 +13,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm build:all
+            - npm run build
+          
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
         
       - name: redux-devtools-cli     
@@ -24,7 +28,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm build:all
+            - npm run build
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
         
       - name: map2tree     
@@ -35,7 +43,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm build:all
+            - npm run build
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
         
       - name: react-dock     
@@ -46,8 +58,12 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
-            - pnpm build:all
+            - npm i 
+            - npm run build
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
         
       - name: react-json-tree     
@@ -59,7 +75,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
       
       - name: redux-devtools-app     ## blocked  
@@ -70,7 +90,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"  
       
         
@@ -83,7 +107,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
         
       - name: redux-devtools-inspector-monitor-trace-tab    
@@ -94,7 +122,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
         
       
@@ -106,7 +138,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
         
       
@@ -119,7 +155,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"
         
         
@@ -132,7 +172,11 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
+            - npm i
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"  
         
       
@@ -145,8 +189,12 @@ postMerge :
         framework : jest
         preRun:
           command:
-            - pnpm install
-            - pnpm build:all
+            - npm i
+            - npm run build
+
+        postRun:
+            command:
+              - node --version 
         configFile : "./jest.config.js"   
       
  
@@ -164,7 +212,7 @@ preMerge :
       framework : jest
       preRun:
         command:
-          - pnpm build:all
+          - npm run build
 
       postRun:
           command:
@@ -179,7 +227,7 @@ preMerge :
       framework : jest
       preRun:
         command:
-          - pnpm build:all
+          - npm run build
 
       postRun:
           command:
@@ -194,7 +242,7 @@ preMerge :
       framework : jest
       preRun:
         command:
-          - pnpm build:all
+          - npm run build
 
       postRun:
           command:
@@ -204,5 +252,3 @@ preMerge :
 version : 2.0.1
 nodeVersion : 17.3.1
 tier: medium
-
-
